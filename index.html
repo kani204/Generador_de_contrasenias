@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Generador de Contraseñas</title>
+    <!-- agregar font awesome para los iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,16 +13,22 @@
         <h1>Generador de Contraseñas Seguras</h1>
         <div class="password-box">
             <input type="text" id="password" readonly>
-            <button id="copyBtn" onclick="copiarContraseña()">Copiar</button>
+            <button id="toggleVisibility" title="Mostrar/Ocultar"><i class="fas fa-eye"></i></button>
+            <button id="copyBtn" onclick="copiarContraseña()" title="Copiar contraseña"><i class="fas fa-copy"></i></button>
+            <button id="generateIconBtn" onclick="generarContraseña()" title="Generar nueva contraseña"><i class="fas fa-sync-alt"></i></button>
         </div>
+
         <div class="options">
             <label for="length">Longitud: <span id="lengthValue">12</span></label>
             <input type="range" id="length" min="6" max="30" value="12">
-            <label><input type="checkbox" id="uppercase"> Mayúsculas</label>
-            <label><input type="checkbox" id="numbers" checked> Números</label>
-            <label><input type="checkbox" id="symbols"> Símbolos</label>
+
+            <div class="toggle-options">
+                <button class="toggle-btn" id="uppercaseBtn">Mayúsculas</button>
+                <button class="toggle-btn active" id="numbersBtn">Números</button>
+                <button class="toggle-btn" id="symbolsBtn">Símbolos</button>
+            </div>
         </div>
-        <button id="generateBtn" onclick="generarContraseña()">Generar Contraseña</button>
+
         <div id="mensaje" class="mensaje-copiado oculto">¡Contraseña copiada!</div>
     </div>
     <script src="script.js"></script>
