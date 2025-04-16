@@ -1,0 +1,28 @@
+<!DOCTYPE htm>
+<html lang="es">
+<head>
+ <meta charset="UTF8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="styles.css">
+ <title>Generador de Contraseñas</title>
+</head>
+<body>
+ <div class="container">
+ <h1>Generador de Contraseñas Seguras</h1>
+ <div class="password-box">
+ <input type="text" id="password" readonly>
+ <button id="copyBtn" onclick="copiarContraseña()">Copiar</button>
+ </div>
+ <div class="options">
+ <label for="length">Longitud: <span id="lengthValue">12</span></label>
+ <input type="range" id="lenght" min="6" max="30" value="12">
+ <label><input type="checkbox" id="uppercase"> Mayúsculas</label>
+ <label><input type="checkbox" id="numbers" checked> Números</label>
+ <label><input type="checkbox" id="symbols"> Símbolos</label>
+ </div>
+ <button id="generateBtn" onclick="generarContraseña()">Generar Contraseña</button> <!--
+Error: Función mal escrita ("generarContraseña" vs "generarPassword") -->
+ </div>
+ <script src="script.js"></script>
+</body>
+</html>
