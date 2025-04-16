@@ -37,7 +37,7 @@ Este proyecto es un generador de contraseñas que permite crear contraseñas seg
 
 ## Demo Online
 
-Puedes ver la demo en vivo en [este enlace](https://miusuario.github.io/generador-contraseñas/).
+Puedes ver la demo en vivo en [este enlace](https://generador-de-contrasenias-opal.vercel.app/).
 
 ## Tecnologías utilizadas
 
